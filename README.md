@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Assembly_MIPS" 
-=======
 # Assembly_MIPS
->>>>>>> 1a41e1e98b18a120737291daf6bcc06d2f71b855
 
 # Exerc_A
   Leia dois valores, armazene na variável A e B, troque o conteúdo de A e B e mostre o conteúdo de A e B.
