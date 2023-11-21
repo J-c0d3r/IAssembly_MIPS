@@ -1,0 +1,30 @@
+.text
+
+li $t0, 54
+li $t1, 67
+li $t2, 85
+li $t3, 91
+li $t4, 12
+li $t5, 48
+li $t6, 64
+li $t7, 40
+li $s7, 35
+li $s6, 45
+li $s5, 16
+
+#1
+and $t0, $t0, $t1
+#2
+and $t2, $t2, $t3
+#3
+or $t4, $t4, $t5
+#4
+or $t6, $t6, $t7
+#5
+xor $s7, $s7, $s6
+#6
+srl $s5, $s5, 2
+#7
+sll $t6, $t6, 2
+
+.data

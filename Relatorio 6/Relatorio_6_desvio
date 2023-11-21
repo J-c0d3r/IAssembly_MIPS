@@ -1,0 +1,62 @@
+## Juan Carlos GES 41
+.text
+
+li $t0, 0 #a
+li $t1, 0 #b
+li $t2, 0 #c
+
+## 1
+beq $t0, $t1, true1
+    add $t1, $t0, $t2
+    sub $t2, $t1, $t2
+    j Exit
+
+true1:add $t2, $t0, $t1
+     sub $t0, $t1, $t2
+     j Exit
+
+## 2
+beq $t0, $t1, true2
+    add $t1, $t0, $t2
+    sub $t2, $t1, $t2
+    j Exit
+
+true2:add $t2, $t0, $t1
+     sub $t0, $t1, $t2
+     j Exit
+
+## 3
+bgt $t0, $t1, true3
+    sub $t1, $t0, $t2
+    add $t2, $t1, $t2
+    j Exit
+
+true3:sub $t2, $t0, $t1
+     add $t0, $t1, $t2
+     j Exit
+
+## 4
+blt $t0, $t1, true4
+    add $t1, $t0, $t2
+    sub $t2, $t1, $t2
+    j Exit
+
+true4:add $t2, $t0, $t1
+     sub $t0, $t1, $t2
+     j Exit
+
+## 5
+li $s0, 10 #i
+li $s1, 0  #cont
+
+while: bgtz $s0, true5
+j Exit
+
+true5:addi $s1, $s1, 5
+     subi $s0, $s0, 2
+     j while
+
+
+Exit: 
+
+.data

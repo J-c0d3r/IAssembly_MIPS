@@ -1,0 +1,16 @@
+.text
+
+addi $t0, $0, 3
+addi $t1, $0, 1
+add $t2, $t0, $t1
+
+### a)
+## 1º Passo: $t0 recebe 3
+## 2º Passo: $t1 recebe 1
+## 3º Passo: $t2 recebe a soma do conteúdo armazenado em $t0 e $t1
+
+### b)
+## Este programa 1º registra/armazena os valores 3 e 1 nos registradores $t0 e $t1 respectivamente 
+## Depois soma os conteúdos registrados e armazena o resultado no registrador $t2
+
+.data

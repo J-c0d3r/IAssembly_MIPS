@@ -1,0 +1,75 @@
+##Juan Carlos GES 41
+
+.text
+
+#Question A
+addi $s0, $0, 2
+addi $s1, $0, 5
+add $s2, $s0, $s1 
+
+li $v0, 4
+la $a0, letterA
+syscall
+
+li $v0, 1
+add $a0, $s2, $0
+syscall
+
+#Question B
+addi $s0, $0, 89
+addi $s1, $0, 20
+add $s2, $s0, $s1
+
+li $v0, 4
+la $a0, letterB
+syscall
+
+li $v0, 1
+add $a0, $s2, $0
+syscall
+
+#Question C
+addi $s0, $0, -80
+addi $s1, $0, 1234
+add $s2, $s0, $s1
+  
+li $v0, 4
+la $a0, letterC
+syscall
+
+li $v0, 1
+add $a0, $s2, $0
+syscall
+
+#Question D
+addi $s0, $0, 70
+addi $s1, $0, 24
+sub $s2, $s0, $s1
+
+li $v0, 4
+la $a0, letterD
+syscall
+
+li $v0, 1
+add $a0, $s2, $0
+syscall
+
+#Question E
+addi $s0, $0, 20
+addi $s1, $0, 150
+sub $s2, $s0, $s1
+
+li $v0, 4
+la $a0, letterE
+syscall
+
+li $v0, 1
+add $a0, $s2, $0
+syscall
+
+.data
+letterA: .asciiz "2 + 5 = "
+letterB: .asciiz "\n89 + 20 = "
+letterC: .asciiz "\n-80 + 1234 = "
+letterD: .asciiz "\n70 - 24 = "
+letterE: .asciiz "\n20 - 150 = "

@@ -1,0 +1,20 @@
+.text
+
+li $s0, 5  #5m Bmenor
+li $s1, 10 #10m Bmaior
+li $s2, 2  #2m Altura
+
+add $t0, $s0, $s1
+mul $t1, $t0, 2
+div $t2, $t1, 2
+
+li $v0, 4
+la $a0, area
+syscall
+
+li $v0, 1
+add $a0, $t2, $0
+syscall
+
+.data
+area: .asciiz "Area do trapezio: "
